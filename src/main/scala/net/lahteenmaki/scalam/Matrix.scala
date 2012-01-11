@@ -44,7 +44,7 @@ object Matrix {
 	def ones[T, Rows <: D, Cols <: D](implicit rows: IntRep[Rows], cols: IntRep[Cols], s: Scalar[T]) =
 		new Matrix[T, Rows, Cols](DenseMatrix.ones(rows.value, cols.value))
 
-	def zeros[T, Dim <: D](implicit dim: IntRep[Dim], s: Scalar[T]): Matrix[T, Dim, Dim] = ones[T, Dim, Dim]
+	def zeros[T, Dim <: D](implicit dim: IntRep[Dim], s: Scalar[T]): Matrix[T, Dim, Dim] = zeros[T, Dim, Dim]
 	def zeros[T, Rows <: D, Cols <: D](implicit rows: IntRep[Rows], cols: IntRep[Cols], s: Scalar[T]) =
 		new Matrix[T, Rows, Cols](DenseMatrix.zeros(rows.value, cols.value))
 }
